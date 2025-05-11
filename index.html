@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prayer times</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="container" >
+        <h1 id="title">مواقيت الصلاة</h1>
+        <select id="country" style="display: block;">
+            <option value="Palestine">فلسطين</option>
+            <option value="Egypt">مصر</option>
+            <option value="Jordan">الأردن</option>
+            <option value="Saudi Arabia">السعودية</option>
+            <option value="Turkey">تركيا</option>
+          </select>
+        <div id="prayer">
+            <div class="pr">العشاء</div>
+            <div class="pr">المغرب</div>
+            <div class="pr">العصر</div>
+            <div class="pr">الظهر</div>
+            <div class="pr">الفجر</div>
+        </div>
+        <div id="prayer">
+            <div id="pr5" class="time"></div>
+            <div id="pr4" class="time"></div>
+            <div id="pr3" class="time"></div>
+            <div id="pr2" class="time"></div>
+            <div id="pr1" class="time"></div>
+        </div>
+        <div id="date">Date</div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
