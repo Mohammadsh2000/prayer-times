@@ -1,9 +1,8 @@
 body{
-
+    background-color: #f0f0f0;
 }
 #container{
     height: 900px;
-   
 }
 #prayer{
     width: fit-content;
@@ -45,14 +44,40 @@ body{
     font-size: 6vw;
 }
 #date{
-    font-size: 6vw;
+    font-size: 4vw;
+    color: #ffffff;
+    background-color: #4a708b;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-align: center;
     width: fit-content;
-    height: 50px;
-    margin: 0 auto;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 select{
-    width: 7vw;
-    height: 3vw;
+    width: 10vw;
+    height: 2.7vw;
     font-size: 2vw;
+    border-radius: 10px;
     margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #183f63;
+
+}
+ol {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; 
+    padding: 0;
+}
+
+li {
+    margin-left: 10px; 
+    padding: 10px 20px;
+    background-color: #895656;
+    color: white;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
 }
