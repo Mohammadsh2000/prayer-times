@@ -61,30 +61,30 @@ body {
     margin: 0 auto;
     background: #0000003c;
     color: white;
-    width: 340px; /* عرض ثابت يناسب شاشة الجوال */
-    height: 100px; /* ارتفاع ثابت */
-    justify-content: flex-end; /* محاذاة النص من اليمين */
+    width: 100%; /* عرض الشاشة بالكامل */
+    max-width: 400px; /* تحديد الحد الأقصى لعرض الشاشة */
+    height: 150px;
+    justify-content: center;
     align-items: center;
     margin-bottom: 2px;
-    border-radius: 8px;
-    font-size: 30px; /* حجم خط أساسي */
-    padding: 0 15px;
-    overflow: hidden; /* إخفاء أي محتوى يخرج عن الحواف */
-    text-overflow: ellipsis; /* إضافة نقاط عند الخروج */
-    white-space: nowrap; /* منع كسر السطر */
-    text-align: right; /* محاذاة الرقم إلى اليمين */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    font-size: 30px;
+    white-space: nowrap; /* منع التفاف النص */
+    text-align: center;
+    overflow: visible; /* السماح للنص بالخروج من الحدود */
 }
 
 #screen span {
-    font-size: 40px;  /* زيادة حجم الخط عند الحاجة */
-    transition: font-size 0.3s ease; /* تأثير سلس */
+    display: inline-block;
+    width: auto; /* عرض تلقائي للنص */
+    overflow: visible; /* السماح للنص بالخروج */
+    text-overflow: unset; /* إلغاء ... في حالة النص الطويل */
 }
 
 #screen.small {
     font-size: 28px; /* تصغير الخط للأنماط الأكبر */
 }
+
 
 
 ol {
