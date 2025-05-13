@@ -1,78 +1,170 @@
-body{
+console.log(4/3)
+document.getElementById("btnErase").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    let arr = value.split("")
+    let newValue=""
+    if(arr[arr.length-1]!=" "){
+        arr.splice(arr.length-1,1)
+    } 
+    if(arr[arr.length-1]==" "){
+        arr.splice(arr.length-3,3)
+    }
+    for (let index = 0; index < arr.length; index++) {
+        newValue += arr[index];
+        
+    }
+    document.getElementById("screen").innerHTML = newValue
+    if(document.getElementById("screen").innerText ==""){
+        document.getElementById("screen").innerHTML = "0"
+    }
+        
+})
+document.getElementById("btnC").addEventListener("click",function(){
 
-    background-color: #414141;
-}
-#container{
-    background-color: #202020;
-    width: fit-content;
-    margin: 0 auto;
-    padding-right: 2px;
-    border-radius: 3px;
+    document.getElementById("screen").innerHTML = "0"
+})
+document.getElementById("btn0").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "0"
+})
+document.getElementById("btn1").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "1"
+})
+document.getElementById("btn2").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "2"
+})
+document.getElementById("btn3").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "3"
+})
+document.getElementById("btn4").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "4"
+})
+document.getElementById("btn5").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "5"
+})
+document.getElementById("btn6").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "6"
+})
+document.getElementById("btn7").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "7"
+})
+document.getElementById("btn8").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "8"
+})
+document.getElementById("btn9").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "9"
+})
+document.getElementById("btnDot").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+    }
+    document.getElementById("screen").innerHTML += "."
+})
 
-}
-.divv{
-    display: flex;
-    margin: 0 auto;
-}
-.num{
-    display: inline-flex;
-    width: 100px;
-    height: 70px;
-    background-color: #302f2f;
-    color: aliceblue;
-    margin-bottom: 2px;
-    margin-left: 2px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 40px;
 
-    user-select: none;       /* منع تحديد النص */
-    cursor: default;         /* الشكل الافتراضي للمؤشر */
-    transition: all 0.3s ease; /* انتقال ناعم عند التغيير */
-}
-.num:hover {
-    background-color: #3B3B3B; /* لون عند مرور الماوس */
-    cursor: pointer;           /* شكل المؤشر يصبح يد */
-}
-.n{
-    background-color: #3B3B3B;
-}.n:hover{
-    background-color: #302f2f;
-}
-#btnEqual{
-    background-color: #4EBEED;
-}
-#btnEqual:hover{
-    background-color: #429cc3;
-}
-
-#screen{
-    display: flex;
-    margin: 0 auto;
-    background: #0000003c;
-    color: white;
-    width: 404;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2px;
-    border-radius: 3px;
-    font-size: 30px;
-}
-ol{
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end; 
-    padding: 0;
-}
-
-li {
-    margin-left: 10px; 
-    padding: 10px 20px;
-    background-color: #895656;
-    color: white;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-}
+document.getElementById("btnSum").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+        return
+    }
+    document.getElementById("screen").innerHTML += " + "
+})
+document.getElementById("btnSub").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+        return
+    }
+    document.getElementById("screen").innerHTML += " - "
+})
+document.getElementById("btnMul").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+        return
+    }
+    document.getElementById("screen").innerHTML += " * "
+})
+document.getElementById("btnDiv").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value =="0"){
+        document.getElementById("screen").innerHTML = ""
+        return
+    }
+    document.getElementById("screen").innerHTML += " / "
+})
+//btnEqual
+document.getElementById("btnEqual").addEventListener("click",function(){
+    let value = document.getElementById("screen").innerText
+    if(value !="0"){
+        if(value[value.length-1] !=" "){
+            let arr = value.split(" ")
+            for (let index = 0; index < arr.length; index++) {
+                if(arr[index] == "*" ){
+                    arr[index+1] = Number(arr[index-1]) * Number(arr[index+1])
+                    arr[index-1] =" "
+                    arr[index]=" "
+                }
+                if (arr[index] == "/") {
+                    arr[index+1] = Number(arr[index-1]) / Number(arr[index+1])
+                    arr[index-1] =" "
+                    arr[index]=" "
+                }
+            }
+            for (let index = 0; index < arr.length; index++) {
+                if(arr[index] == "+" ){
+                    arr[index+1] = Number(arr[index-1]) + Number(arr[index+1])
+                    arr[index-1] =" "
+                    arr[index]=" "
+                }
+                if (arr[index] == "-") {
+                    arr[index+1] = Number(arr[index-1]) - Number(arr[index+1])
+                    arr[index-1] =" "
+                    arr[index]=" "
+                }
+            }
+            document.getElementById("screen").innerHTML = arr[arr.length-1]
+        }
+    }
+})
