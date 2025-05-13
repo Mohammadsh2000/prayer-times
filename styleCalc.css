@@ -1,78 +1,126 @@
-body{
-
+body {
     background-color: #414141;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#container{
+
+#container {
     background-color: #202020;
     width: fit-content;
-    margin: 0 auto;
-    padding-right: 2px;
-    border-radius: 3px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
 
-}
-.divv{
+.divv {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
-.num{
+
+.num {
     display: inline-flex;
-    width: 100px;
-    height: 70px;
+    width: 80px;
+    height: 60px;
     background-color: #302f2f;
     color: aliceblue;
-    margin-bottom: 2px;
-    margin-left: 2px;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    font-size: 40px;
+    border-radius: 8px;
+    font-size: 28px;
+    user-select: none;
+    cursor: default;
+    transition: all 0.3s ease;
+}
 
-    user-select: none;       /* منع تحديد النص */
-    cursor: default;         /* الشكل الافتراضي للمؤشر */
-    transition: all 0.3s ease; /* انتقال ناعم عند التغيير */
-}
 .num:hover {
-    background-color: #3B3B3B; /* لون عند مرور الماوس */
-    cursor: pointer;           /* شكل المؤشر يصبح يد */
-}
-.n{
     background-color: #3B3B3B;
-}.n:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.n {
+    background-color: #3B3B3B;
+}
+
+.n:hover {
     background-color: #302f2f;
 }
-#btnEqual{
+
+#btnEqual {
     background-color: #4EBEED;
 }
-#btnEqual:hover{
+
+#btnEqual:hover {
     background-color: #429cc3;
 }
 
-#screen{
+#screen {
     display: flex;
     margin: 0 auto;
     background: #0000003c;
     color: white;
-    width: 404;
-    height: 150px;
-    justify-content: center;
+    width: 340px; /* عرض ثابت يناسب شاشة الجوال */
+    height: 100px; /* ارتفاع ثابت */
+    justify-content: flex-end; /* محاذاة النص من اليمين */
     align-items: center;
     margin-bottom: 2px;
-    border-radius: 3px;
-    font-size: 30px;
+    border-radius: 8px;
+    font-size: 30px; /* حجم خط أساسي */
+    padding: 0 15px;
+    overflow: hidden; /* إخفاء أي محتوى يخرج عن الحواف */
+    text-overflow: ellipsis; /* إضافة نقاط عند الخروج */
+    white-space: nowrap; /* منع كسر السطر */
+    text-align: right; /* محاذاة الرقم إلى اليمين */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
 }
-ol{
-    width: 100%;
-    list-style-type: none;
+
+#screen span {
+    font-size: 40px;  /* زيادة حجم الخط عند الحاجة */
+    transition: font-size 0.3s ease; /* تأثير سلس */
+}
+
+#screen.small {
+    font-size: 28px; /* تصغير الخط للأنماط الأكبر */
+}
+
+
+ol {
     display: flex;
-    justify-content: flex-end; 
-    padding: 0;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #2c3e50;
+    margin: 0;
+    list-style: none;
 }
 
 li {
-    margin-left: 10px; 
-    padding: 10px 20px;
-    background-color: #895656;
-    color: white;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
+    background-color: #34495e;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+li:hover {
+    background-color: #1abc9c;
+}
+
+@media (max-width: 480px) {
+    .num {
+        width: 60px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    #screen {
+        width: 260px;
+        height: 80px;
+        font-size: 28px;
+    }
 }
