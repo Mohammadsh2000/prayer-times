@@ -18,7 +18,7 @@ body{
     display: inline-flex;
     width: 100px;
     height: 70px;
-    background-color: #3B3B3B;
+    background-color: #302f2f;
     color: aliceblue;
     margin-bottom: 2px;
     margin-left: 2px;
@@ -26,7 +26,27 @@ body{
     align-items: center;
     border-radius: 5px;
     font-size: 40px;
+
+    user-select: none;       /* منع تحديد النص */
+    cursor: default;         /* الشكل الافتراضي للمؤشر */
+    transition: all 0.3s ease; /* انتقال ناعم عند التغيير */
 }
+.num:hover {
+    background-color: #3B3B3B; /* لون عند مرور الماوس */
+    cursor: pointer;           /* شكل المؤشر يصبح يد */
+}
+.n{
+    background-color: #3B3B3B;
+}.n:hover{
+    background-color: #302f2f;
+}
+#btnEqual{
+    background-color: #4EBEED;
+}
+#btnEqual:hover{
+    background-color: #429cc3;
+}
+
 #screen{
     display: flex;
     margin: 0 auto;
